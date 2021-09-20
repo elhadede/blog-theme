@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <div class="posts">
+        {{ range first 10 .Pages}}
+        <article class="card">
+            <a href="{{ .Permalink }}">
+                <div class="aspect-ratio-box">
+                    <img src="{{ .Params.thumbnail }}">
+                </div>
+                {{ .Title }}
+            </a>
+        </article> 
+        {{ end }}
+    </div>
+{{ end }}
